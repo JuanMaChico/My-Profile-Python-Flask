@@ -1,4 +1,5 @@
 from flask import Flask , render_template , request
+from moduls import gmail
 
 app =  Flask(__name__)
 
@@ -20,9 +21,9 @@ def add_Contact():
         Nombre = request.form['Nombre']
         Email = request.form['Email']
         Mensaje = request.form['Mensaje']
-        print (Nombre)
-        print (Mensaje)
-        print (Email)
+        
+        gmail.sendMailWithGmail(Nombre,Email,Mensaje)
+
     return render_template('Contact.html')
 
 if __name__ == '__main__':

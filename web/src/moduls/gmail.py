@@ -1,17 +1,20 @@
 import smtplib
 
-def gmail(Mensaje):
-	print ("****enviar email con gmail***")
+def sendMailWithGmail(Nombre,Origen,Mensaje):
+	
+	gmailaddress =("pruebas.sistemas.jm@gmail.com")     
+	gmailpassword =("jtsxktgtvkjmzvtq")                 
 
-
-	gmailaddress =("pruebas.sistemas.jm@gmail.com")     #input("what is your gmail address? \n ")
-	gmailpassword =("juliocasares3484")                 #input("what is the password for that email address? \n  ")
-	mailto =  ("juanmanuelchico@hotmail.com")                            #input("destino? \n ")
-	#asunto=   (Facturacion)                                     #input("asunto?\n ")
-	msg = (Mensaje)      #input("mensaje? \n ")
+	destino =  ("juanmanuelchico@hotmail.com")           
+	
+	msg = ('\nDe: ' + Nombre +'\nDesde: '+ Origen + '\nMensaje: ' + Mensaje)								
+	
 	mailServer = smtplib.SMTP('smtp.gmail.com' , 587)
+	
 	mailServer.starttls()
+	
 	mailServer.login(gmailaddress , gmailpassword)
-	mailServer.sendmail(gmailaddress, mailto , msg)
-	print(" \n Enviado...")
+
+	mailServer.sendmail(gmailaddress,destino,msg)
+
 	mailServer.quit()
