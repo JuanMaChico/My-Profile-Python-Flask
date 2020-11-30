@@ -6,48 +6,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/png" href="static/image/favicom2.png">
-    <title>Juan Manuel Chico</title>
-    <!---BOOSTRAP 4-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--CUSTOM CSS-->
+    <link rel="shortcut icon" type="image/png" href="static/image/favicom.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>My Profile</title>
+    <!--Importacion del archivo CSS-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
-
+<!--Inicio del Cuerpo-->
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Juan Manuel Chico</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="/">Inicio</a>
-                <a class="nav-item nav-link" href="{{ url_for('about') }}">Acerca De Mi</a>
-                <a class="nav-item nav-link" href="{{ url_for('Contact') }}">Contacto</a>
-            </div>
-        </div>
-    </nav>
-<div class="container p-4">
-        {% block content %}
+    <!--Barra de navigacion-->
+      <div class="container">
+        <nav class="nav-main">
+          <ul class="nav-menu">
+            <li><a href="{{ url_for('home') }}">Inicio</a></li>
+            <li><a href="{{ url_for('carta') }}">Carta de Presentacion</a></li>
+            <li><a href="{{ url_for('cursos') }}">Cursos Realizados</a></li>
+            <li><a href="{{ url_for('proyects') }}">Proyectos</a></li>
+            <li><a href="{{ url_for('about') }}">Carrera Profecional</a></li>
+            <li><a href="{{ url_for('Contact') }}">Contacto</a></li>
+          </ul>
+        </nav>
+        <hr>
 
+
+
+
+
+
+
+<!--Componentes Importados mediante Flask-->
+<div>
+        {% block content %}
+        <!--Entre estas etiquetas de Bloque se encontrara el codigo importado como componente por flask-->
         {% endblock %}
 </div>
 
+
+
+
+
+
+
+<!--Inicio del Pie de pagina-->
 <footer>
-    <a id="whatsapp" href="https://api.whatsapp.com/send?phone=5491168940444"><img src="../static/image/whatsapp.png"></a>
+    <a id="whatsapp" href="https://api.whatsapp.com/send?phone=5491168940444"><img src="../static/image/whatsapp.ico"></a>
     <div class="contenedor">
         <div class="redes">
             <a href="https://www.facebook.com/juanmanuel.chico.1" target="blank"><img src="../static/image/facebook.ico" alt="facebook"></a>
             <a href="https://www.instagram.com/juanmachico/" target="blank"><img src="../static/image/instagram.ico" alt="instagram"></a>
             <a href="https://twitter.com/juanmachicco" target="blank"><img src="../static/image/twitter.ico" alt="twitter"></a>
             <a href="https://github.com/JuanMaChico" target="blank"><img src="../static/image/github.ico" alt="github"></a>
+            <a href="https://www.linkedin.com/in/juanmanuelchico/" target="blank"><img src="../static/image/linkedin.ico" alt="linkedin"></a>
         </div>
-        <div class="parrafo"><p> © 2020 Juan Manuel Chico | Diseñadores Web Argentina. Todos los derechos reservados</p></div>
+        <div class="parrafo"><p> © 2020 Juan Manuel Chico | Desarrollador Web Argentina. Todos los derechos reservados</p></div>
     </div>
 </footer>
-
 </body>
 </html>
