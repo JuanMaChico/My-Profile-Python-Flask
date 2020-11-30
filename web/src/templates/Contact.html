@@ -3,7 +3,19 @@
 
 {% block content %}
 <!--Contenido del Componente-->
-<div>
+<body>
+
+  <form action="/add_Contact" method="POST" class="formContact">
+
+    <h2 class="h2">CONTACTO</h2>  
     
-</div>
+    <p><input name="Nombre" class="input" placeholder="Ingrese su Nombre"></input></p>
+    <p><input name="Email" class="input" placeholder="Ingrese su Email"></input></p>
+    <p><input name="Mensaje" class="input" placeholder="Ingrese Mensaje"></input></p>
+
+    <button type="submit" class="button">Enviar</button>
+
+  </form>
+
+</body>
 {% endblock %}
