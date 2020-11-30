@@ -18,4 +18,4 @@ Y sin problema tendria que levantarnos un servidor local y mostrarnos una URL qu
 La idea de este proyecto es poder llegar a realizar un Cv como si fuese una pagina web utilizando la tecnologica de flask con el lenguaje python 
 tratando de utilizar todo lo aprendido con estas herramientas.
 
-
+Esta es fue mi primera aproximacion al desarrollo web.
