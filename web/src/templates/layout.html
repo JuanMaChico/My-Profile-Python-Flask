@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Juan Manuel Chico</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -33,8 +32,22 @@
     </nav>
 <div class="container p-4">
         {% block content %}
+
         {% endblock %}
 </div>
-</body>
 
+<footer>
+    <a id="whatsapp" href="https://api.whatsapp.com/send?phone=5491168940444"><img src="../static/image/whatsapp.png"></a>
+    <div class="contenedor">
+        <div class="redes">
+            <a href="https://www.facebook.com/juanmanuel.chico.1" target="blank"><img src="../static/image/facebook.ico" alt="facebook"></a>
+            <a href="https://www.instagram.com/juanmachico/" target="blank"><img src="../static/image/instagram.ico" alt="instagram"></a>
+            <a href="https://twitter.com/juanmachicco" target="blank"><img src="../static/image/twitter.ico" alt="twitter"></a>
+            <a href="https://github.com/JuanMaChico" target="blank"><img src="../static/image/github.ico" alt="github"></a>
+        </div>
+        <div class="parrafo"><p> © 2020 Juan Manuel Chico | Diseñadores Web Argentina. Todos los derechos reservados</p></div>
+    </div>
+</footer>
+
+</body>
 </html>
