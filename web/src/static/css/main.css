@@ -140,6 +140,14 @@ footer p {
 html {
     scroll-behavior: smooth;
 }
+/*-----------Carta de presentacion------------*/
+.carta{
+    background: rgba(0, 0, 0, 0.61);
+}
+.carta p,h2 {
+    color: #fff;
+    padding: 10px 30px;
+}
 
 /*-----------Formulario de contacto------------*/
 .formContact {
@@ -154,8 +162,8 @@ html {
     padding: 20px 30px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
-
 .h2 {
     margin: 10px 0;
     text-align: center;
@@ -164,7 +172,6 @@ html {
     color: #ffffff;
     border-bottom: 3px solid  #ffffff
 }
-
 .input {
     text-align: center;
     padding: 40px 160px;
@@ -174,6 +181,8 @@ html {
     resize: none;
     border: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
     transition: all .3s;
     border-bottom: 2px solid  #ffffff;
 }
@@ -192,13 +201,13 @@ html {
     padding: 10px 15px;
     margin: 100px 0 0;
     font-family: 'Montserrat', sans-serif;
-    border: 2px solid #78788c;
+    border: 2px solid #e20c0c;
     background: 0;
     color: #5a5a6e;
     cursor: pointer;
     transition: all .3s;
 }
 .button:hover {
-    background:  rgb(160, 152, 152);
+    background:  rgb(209, 204, 204);
     color: #fff
 }
